@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { User, LogOut, ShieldCheck, X, ChevronRight, Check, Loader2, ArrowLeft, Menu, History, Trash2, Plus, MessageSquare } from "lucide-react";
+import { User, LogOut, ShieldCheck, X, ChevronRight, Check, Loader2, ArrowLeft, Menu, History, Trash2, Plus, MessageSquare, ExternalLink, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { updateUserProfile, getSessionsForUser, deleteSession, createSession } from "../services/firebaseService";
+import AdBanner160x300 from "./AdBanner160x300";
 
 interface MenuDrawerProps {
   isOpen: boolean;
@@ -246,6 +247,28 @@ export default function MenuDrawer({
                       </div>
                       <ChevronRight size={16} className="text-white/30 group-hover:text-white/60 transition-colors" />
                     </button>
+
+                    {/* Smartlink Promotional Placement */}
+                    <a
+                      href="https://www.effectivecpmnetwork.com/b0w56gfbrh?key=533e22b2b8a29fd10e733756c2c60aa6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full flex items-center justify-between p-4 rounded-2xl bg-gradient-to-r from-violet-600/10 via-pink-600/10 to-amber-500/10 hover:from-violet-600/15 hover:via-pink-600/15 hover:to-amber-500/15 border border-violet-500/20 hover:border-violet-500/40 transition-all group cursor-pointer text-left block mb-2"
+                    >
+                      <div className="flex items-center gap-3">
+                        <Sparkles size={18} className="text-amber-400 animate-pulse shrink-0" />
+                        <div>
+                          <span className="text-sm font-bold bg-gradient-to-r from-amber-200 via-pink-200 to-violet-200 bg-clip-text text-transparent block">Zoya's Special Offer</span>
+                          <span className="text-[10px] text-white/50 block mt-0.5">Click to check out premium offers</span>
+                        </div>
+                      </div>
+                      <ExternalLink size={15} className="text-white/40 group-hover:text-white/80 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" />
+                    </a>
+
+                    {/* Banner 160x300 */}
+                    <div className="pt-2 pb-4 border-t border-white/5">
+                      <AdBanner160x300 />
+                    </div>
                   </div>
                 </div>
               )}
